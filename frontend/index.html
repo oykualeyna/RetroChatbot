@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>~*~ RetroBot 98 ~*~ Sanal Sohbet Odasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!--
+  Sayfanın iki görünümü var:
+    - Varsayılan: 1998 (RetroBot)
+    - body'ye "modern" sınıfı eklenince: 2035 (Nova)
+  "retro-only" sınıflı öğeler sadece 1998'de, "modern-only" olanlar sadece 2035'te görünür.
+-->
+<body>
+  <div id="sayfa">
+
+    <!-- Üst çubuk: dönem değiştirme butonu -->
+    <div class="ust-cubuk">
+      <span class="modern-only logo">◐ nova</span>
+      <button type="button" id="donem-butonu" class="donem-butonu">
+        <span class="retro-only">✨ MODERNLEŞTİR ✨</span>
+        <span class="modern-only">↺ 1998'e dön</span>
+      </button>
+    </div>
+
+    <!-- ===== Başlık ===== -->
+    <h1 class="gokkusagi retro-only">~*~ RetroBot 98'e Hoş Geldiniz! ~*~</h1>
+
+    <div class="modern-only kahraman">
+      <h1>Merhaba, ben Nova.</h1>
+      <p>2035'in kişisel yapay zeka asistanı. Ne düşünüyorsan sor.</p>
+    </div>
+
+    <marquee behavior="scroll" direction="left" scrollamount="6" class="kayan-yazi retro-only">
+      ★ Sitemiz yayında! ★ RetroBot ile sohbet edin! ★ En iyi Netscape Navigator 4.0 ile 800x600 çözünürlükte görüntülenir ★ Ziyaretçi defterimizi imzalamayı unutmayın! ★
+    </marquee>
+
+    <table class="duzen" cellpadding="0" cellspacing="8">
+      <tr>
+        <!-- Sol menü (sadece 1998) -->
+        <td class="yan-menu retro-only" valign="top">
+          <div class="kutu">
+            <div class="kutu-baslik">MENÜ</div>
+            <ul>
+              <li><a href="#">» Ana Sayfa</a></li>
+              <li><a href="#">» Hakkımda</a></li>
+              <li><a href="#">» Fotoğraflarım</a></li>
+              <li><a href="#">» Linklerim</a></li>
+              <li><a href="#">» Ziyaretçi Defteri</a></li>
+            </ul>
+          </div>
+
+          <div class="kutu ortala">
+            <div class="kutu-baslik">ZİYARETÇİ</div>
+            <p>Siz bu sayfanın</p>
+            <div id="sayac" class="sayac">000000</div>
+            <p>. ziyaretçisisiniz!</p>
+          </div>
+
+          <div class="yapim-asamasinda">
+            <span>🚧 YAPIM<br>AŞAMASINDA 🚧</span>
+          </div>
+        </td>
+
+        <!-- Sohbet penceresi -->
+        <td valign="top">
+          <div class="pencere">
+            <div class="pencere-baslik">
+              <span class="retro-only">💬 RetroBot Sohbet - [Bağlı: 56.6 Kbps]</span>
+              <span class="modern-only"><i class="canli-nokta"></i> Nova · çevrimiçi</span>
+              <span class="pencere-dugmeler retro-only">
+                <button type="button" tabindex="-1">_</button><button type="button" tabindex="-1">□</button><button type="button" tabindex="-1">×</button>
+              </span>
+              <span class="modern-only baglanti">6G · 12 ms</span>
+            </div>
+
+            <!-- Mesajlar script.js tarafından eklenir -->
+            <div id="sohbet" class="sohbet-alani"></div>
+
+            <form id="form" class="giris-alani">
+              <input type="text" id="mesaj" autocomplete="off" maxlength="1000" required>
+              <button type="submit" id="gonder">
+                <span class="retro-only">Gönder</span>
+                <span class="modern-only">➤</span>
+              </button>
+            </form>
+
+            <div class="durum-cubugu retro-only">
+              <span id="durum">Hazır</span>
+              <span>🌐 İnternet</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <hr class="cizgi retro-only">
+
+    <p class="alt-bilgi retro-only">
+      <span class="yanip-son">YENİ!</span>
+      © 1998 RetroBot | Webmaster'a e-posta gönderin |
+      Bu site Notepad ile yapılmıştır
+    </p>
+
+    <p class="alt-bilgi modern-only">© 2035 Nova Labs · Yanıtlar nöral ağ tarafından üretilir</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
